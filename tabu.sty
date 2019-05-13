@@ -858,11 +858,12 @@
 %%TABU-FIXED define classz to use vcenter, reverting a change in array package
 \let\tabu@classzORI\@classz
 \def\tabu@classz{%
-\ifx\tabu@prepnext@tok\prepnext@tok% in tabu
-\expandafter\tabu@classz@oldarray
-\else
-\tabu@classzORI
-\fi}%
+%  \ifx\tabu@prepnext@tok\prepnext@tok% in tabu
+%    \expandafter\tabu@classz@oldarray
+%  \else
+    \tabu@classzORI
+%  \fi
+}%
 \def\tabu@classz@oldarray{%
      \@classx
      \@tempcnta \count@
